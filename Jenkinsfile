@@ -23,14 +23,14 @@ pipeline {
         }
 
         // STAGE 2
-        // stage('Client Tests') {
-        //     steps {
-        //         dir('docker-react') {
-        //             sh 'npm install'  // sh -> means run in the shell
-        //             sh 'npm test'   // you have to manually add tests and provide this scripe in package.json
-        //             // first install nodejs on ec2 instance and commit this code and retart the jenkins pipeline
-        //         }
-        //     }
-        // }
+        stage('Client Tests') {
+            steps {
+                dir('docker-react') {
+                    sh 'npm install'  // sh -> means run in the shell
+                    sh 'npm test'   // you have to manually add tests and provide this scripe in package.json
+                    // first install nodejs on ec2 instance and commit this code and retart the jenkins pipeline
+                }
+            }
+        }
     }
 }
