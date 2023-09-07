@@ -4,6 +4,8 @@ pipeline {
     // it's an environment where jobs run
     agent any // use any agent available
 
+    tools {nodejs "nodejs"}
+
     // there are total 5 stages in pipeline
     // 1) connect to github project
     // 2) run frontend tests
